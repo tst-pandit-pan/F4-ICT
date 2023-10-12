@@ -1,0 +1,13 @@
+n1, n2 = input("Input two integers:").split()
+print()
+p1 = float(n1) * (float(n2) // 10) * 10
+p2 = float(n1) * (float(n2) % 10)
+p = int(p1) + int(p2)
+print("{:>9}".format(n1))
+print("x", end = "")
+print("{:>8}".format(n2))
+print("---------")
+print("{:>9}".format(int(p1)))
+print("{:>9}".format(int(p2)))
+print("---------")
+print("{:>9}".format(p))
