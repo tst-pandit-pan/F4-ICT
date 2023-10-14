@@ -2,15 +2,13 @@ print("Input test marks (enter -1 to stop input):")
 mark = 0
 count = 0
 total = 0
-for i in range(1,100000):
-    mark = input("Test " + str(i) + "?")
+while mark != -1:
+    mark = int(input("Test " + str(count + 1) + "?"))
     print()
-    if mark == "-1":
-        print()
-        break
-    else:
-        total = total + int(mark)
+    if mark != -1:
         count = count + 1
+        total = total + int(mark)
+print()
 average = (total / count)
 print("Number of tests = " + str(count))
 print("Total mark = " + str(float(total)))
