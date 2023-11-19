@@ -1,5 +1,5 @@
 import random
-answer = int(random.random() * 100)
+answer = random.randint(1, 100)
 print('[ Guess a number from 1 to 100 ]')
 guess = int(input("Your guess: "))
 while (guess != answer):
