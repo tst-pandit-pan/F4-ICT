@@ -1,0 +1,16 @@
+substr(string_name, start_pos, numofcharaterbeingextracted) normally start with 1
+
+word <- "pinapple"
+Input SHORT
+LWORD <- lenth of WORD
+LSHORT <- lenth of SHORT
+
+pos <- 0
+
+for i from 1 to LWORD - LSHORT + 1              #i=4        EXAM
+    if substr(word, i, LSHORT) == short:                    EXAM
+        pos = i
+if pos != 0:
+    print("the word" ,short, "starts from index", pos)
+else:
+    print("not found")
