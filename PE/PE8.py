@@ -13,7 +13,7 @@ for i in range(1,?):
       j = 0
       while (j <= ?) ? not exist:
           if ? :   # check the current generated num exists in the previously generated num of the list
-              exist = ?
+              exist = True
           ?
     ?									# the most challenging one
 
