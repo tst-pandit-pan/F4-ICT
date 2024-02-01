@@ -1,11 +1,11 @@
 import random
 # Initialization
 n = [0, 0, 0, 0, 0, 0, 0]
-sn = [0, 0, 0, 0, 0, 0]
+sn = [?, ?, ?, ?, ?, ?]
 
 # Generating 7 non-repeating numbers between 1 and 49
-n[0] = int(random.random() * 49) + 1
-exist = False
+n[0] = ?(random.random() * ?) + 1
+exist = ?
 for i in range(1,?):
     while exist:
       n[i] = ?(random.random() * ?) + 1
@@ -13,7 +13,7 @@ for i in range(1,?):
       j = 0
       while (j <= ?) ? not exist:
           if ? :   # check the current generated num exists in the previously generated num of the list
-              exist = True
+              exist = ?
           ?
     ?									# the most challenging one
 
@@ -29,11 +29,11 @@ for i in range(?):
     n[pmin] = ?   # assign a value big enough so that the num copied to sn[] will not be minimum anymore
 
 # Displaying the numbers generated
-print("The six drawn numbers are ", end = "")
+print('The six drawn numbers are ', end = '')
 for i in range(?):
-    print(?, end = "")
+    print(?, end = '')
     if i != ?:
-        print(", ", end = "")
+        print(', ', end = '')
     else:
         print(?)
-        print("The extra-number is " + int(n[?]) + ".")
+        print('The extra-number is ' + ?(n[?]) + '.')
