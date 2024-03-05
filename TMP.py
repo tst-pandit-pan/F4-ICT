@@ -1,12 +1,6 @@
-puzzle = ["GYGGNTOVTKTNACJ", "ZIGRAVYNTNAILID", "ZAROREGITYKULHY", "TGGAZUFLVTRGIGP", "CNEGFMORGOENGTO", "XBALUFSPOLEEASL", "ZAGHDQEMIGMPTRA", "BIBEPTIOKOYOOHR", "JZWGZENTWKRKRKB", "NNOSNVLGTKUEJAE", "IRSDYHYEKNOMJMA", "NEPSVQZLUCCASVR", "DECPGUOYTOADUXB", "BQHDAVDXLULXBEZ", "WPANDASALZMMUWR"]
-word = input()
-found = False
-for i in range(15):
-    for j in range(15):
-        if puzzle[i][j] == word[0] and found == False:
-            found = True
-            for k in range(len(word)):
-                if j+k >15 or word[k] != puzzle[i][j+k]:
-                    found = False
-if found == True:
-    print("True")
+import random
+# Initialize all elements of 2D array of Card to 0
+card = [ [0], [0], [0], [0] ]
+for i in range(3):
+    card[i] = [0,0,0,0,0,0,0,0,0,0,0,0,0]
+print(card)             # for visualization in debugging
