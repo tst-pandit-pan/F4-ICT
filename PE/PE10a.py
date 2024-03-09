@@ -14,22 +14,22 @@ magic = [[0 for i in range(order)] for j in range(order)]
 # print(magic)                                     # for visualization in debugging
 
 row = 0
-col = order // 2
-for n in range(1, order * order + 1):
+col = order // 2    #put 1 at the middle?
+for n in range(1 , order * order + 1):
     magic[row][col] = n
     if row == 0:
-        r = order - 1
+        r = order - 1       #if row is 0 cannot minus row 1 again
     else:
-        r = row - 1
+        r = row - 1         #minus 1 from row
     if col == order - 1:
-        c = 0
+        c = 0               #if col is at the end, start from 0   
     else:
-        c = col + 1
-    if magic[r][c] != 0:
-        row += 1
-    else:
+        c = col + 1         #add 1 to col
+    if magic[r][c] == 0:    
         row = r
         col = c
+    else:
+        row = row + 1
 
 # print(magic)                                     # for visualization in debugging
 
