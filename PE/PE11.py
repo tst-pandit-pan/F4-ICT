@@ -32,11 +32,11 @@ def menu():
     print('4 : Division')
     print('5 : Quit')
     print()
-    choice = ??
-    while ??
-        if ??
-            ??
-        choice = ??
+    choice = int(input("Enter your choice: "))
+    while (choice < 0):
+        if (choice < 0) and (choice > 6):
+            print("Invalid input. Reenter using 1-5 ")
+        choice = int(input("Enter your choice: "))
     print()
 
 
@@ -45,61 +45,68 @@ def menu():
 
 def addition():    # may use x and y as local variables
     global correct_answer
+    global x, y
     x = int(random.random()*10)
     y = int(random.random()*10)
-    return
     correct_answer = x + y
 
 def subtraction():     # may use x and y as local variables
     global correct_answer
+    global x, y
     x = int(random.random()*10)
     y = int(random.random()*10)
     while x < y:
         y = int(random.random()*10)
-    return
     correct_answer = x - y
 
 def multiplication():    # may use x and y as local variables
     global correct_answer
+    global x, y
     x = int(random.random()*10)
     y = int(random.random()*10)
-    return
     correct_answer =  x * y
 
 def division():           # may use x and y as local variables
     global correct_answer
+    global x, y
     x = int(random.random()*10)           # generate quotient first
     y = int(random.random()*10)           # generate divisor
-    return
     correct_answer = x / y
 
 # using CASE statement, call a procedure to generate a question according to the user's choice
 def generate_question():
-    ??
-    match ??:
-        case ?? :
+    user_answer = 0
+    match choice:
+        case 1 :
             addition()
+        case 2 :
+            subtraction()
+        case 3 :
+            multiplication()
+        case 4 :
+            division()
         # fill in a few missing lines here
 
 # accept user's answer into the global variable user_answer and respond accordingly
 def accept_answer():
-    ??
-    ??
-    user_answer = ??
+    global user_answer
+    global correct_answer
+    user_answer = int(input("Enter your choice: "))
     print()
-    if ??
+    if user_answer == correct_answer:
         print('You are right. Good!')
     else:
-        ??
-        ??
+        print("Sorry! you are wrong.")
+        print("The correct answer is " + str(correct_answer) + ".")
     print()
 
 # record data for statistics into the global variables qcount and ncorrect
 def statistics():
     # fill in a few missing lines here
-    qcount = ??
-    if ??
-        ncorrect = ??
+    global qcount, ncorrect
+    qcount = qcount + 1
+    if user_answer == correct_answer:
+        ncorrect = ncorrect + 1
 
 # use an empty loop to create a time delay
 def delay():      # use local variable i
@@ -108,11 +115,11 @@ def delay():      # use local variable i
     sleep(1)                                 # 1 seconds
 
 def display_statistics():
-    ??
-    ??
+    global qcount
+    global ncorrect
     print('Thank you for using this drilling program.')
     print('You got ', end="")
-    ??
+    print(ncorrect, end="")
     print(" '% correct.")
 
 # Main program
