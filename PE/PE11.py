@@ -33,8 +33,8 @@ def menu():
     print('5 : Quit')
     print()
     choice = int(input("Enter your choice: "))
-    while (choice < 0):
-        if (choice < 0) and (choice > 6):
+    while (choice < 0) and (choice > 6):
+        if (choice < 1) or (choice > 5):
             print("Invalid input. Reenter using 1-5 ")
         choice = int(input("Enter your choice: "))
     print()
@@ -46,31 +46,31 @@ def menu():
 def addition():    # may use x and y as local variables
     global correct_answer
     global x, y
-    x = int(random.random()*10)
-    y = int(random.random()*10)
+    x = int(random.random()*100)
+    y = int(random.random()*100)
     correct_answer = x + y
 
 def subtraction():     # may use x and y as local variables
     global correct_answer
     global x, y
-    x = int(random.random()*10)
-    y = int(random.random()*10)
+    x = int(random.random()*100)
+    y = int(random.random()*100)
     while x < y:
-        y = int(random.random()*10)
+        y = int(random.random()*100)
     correct_answer = x - y
 
 def multiplication():    # may use x and y as local variables
     global correct_answer
     global x, y
-    x = int(random.random()*10)
-    y = int(random.random()*10)
+    x = int(random.random()*12)
+    y = int(random.random()*12)
     correct_answer =  x * y
 
 def division():           # may use x and y as local variables
     global correct_answer
     global x, y
-    x = int(random.random()*10)           # generate quotient first
-    y = int(random.random()*10)           # generate divisor
+    x = int(random.random()*12)           # generate quotient first
+    y = int(random.random()*12)           # generate divisor
     correct_answer = x / y
 
 # using CASE statement, call a procedure to generate a question according to the user's choice
@@ -91,7 +91,7 @@ def generate_question():
 def accept_answer():
     global user_answer
     global correct_answer
-    user_answer = int(input("Enter your choice: "))
+    user_answer = int(input())
     print()
     if user_answer == correct_answer:
         print('You are right. Good!')
@@ -119,7 +119,7 @@ def display_statistics():
     global ncorrect
     print('Thank you for using this drilling program.')
     print('You got ', end="")
-    print(ncorrect, end="")
+    print(ncorrect/qcount, end="")
     print(" '% correct.")
 
 # Main program
