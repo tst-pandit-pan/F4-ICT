@@ -8,3 +8,4 @@ if (level >= 5) or (level <= 10):
         for j in range(i):
             print("o", end="")
         print()
+        

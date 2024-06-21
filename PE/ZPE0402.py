@@ -15,3 +15,4 @@ if (level >= 5) or (level <= 10):
             print("o", end="")
         level = level - 1
         print()
+        
