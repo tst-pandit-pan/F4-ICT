@@ -1,10 +1,17 @@
 N = int(input())
-numbers = []        # Initialize
-sorted = []         # Initialize
-count = 0           # Initialize
+count = 0
 numbers = input().split()
 for i in range(N):
-    for j in range(N):
-        if numbers[i] > sorted[j]:
-            sorted[j] = numbers[i]
-            count = count + 1
+    numbers[i] = int(numbers[i])
+
+for i in range(N):
+    key = numbers[i]
+    j = i - 1
+    while j >= 0 and key < numbers[j]:
+        numbers[j + 1] = numbers[j]
+        j = j - 1
+    numbers[j + 1] = key
+    count = count + 1
+    for k in range(count):
+        print(numbers[k], end = " ")
+    print()
